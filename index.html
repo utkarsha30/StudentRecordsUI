@@ -7,10 +7,23 @@
     <title>Document</title>
 </head>
 <body>
-    <div id = "container">
-
+    <div id="container">
+        <form>
+            <div class="serach">
+            <input type="text" id="search" placeholder="Search" name="search" />
+            <button type="button" onclick="filterData()">Submit</button>
+        </div>
+            <div class="sort-filter">
+                <button type="button" onclick="sortData('A-Z')">Sort A->Z</button>
+                <button type="button" onclick="sortData('Z-A')">Sort Z->A</button>
+                <button type="button" onclick="sortData('Marks')">Sort By Marks</button>
+                <button type="button" onclick="sortData('Passing')">Sort By Passing</button>
+                <button type="button" onclick="sortData('Class')">Sort By Class</button>
+                <button type="button" onclick="sortData('Gender')">Sort By Gender</button>
+            </div>
+        </form>
+        <div id="table-container"></div>
     </div>
     <script src="script.js"></script>
-    
 </body>
 </html>

@@ -1,0 +1,54 @@
+
+
+form {
+    margin-bottom: 20px; 
+}
+.serach{
+    display: flex;  
+}
+.sort-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+   margin-top: 10px;
+}
+input{
+    width: 100%;
+    height: 32px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+.sort-filter button {
+    flex: 1; /* Make buttons take equal space */
+    margin: 0 10px; /* Add margin between buttons */
+    padding:10px
+}
+ button{
+    padding:10px ;
+   background-color: #000000;
+   color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%; /* Ensure the table takes up the full width of the container */
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+.student-info {
+    display: flex;
+    align-items: center;
+}
+
+span {
+    margin-left: 10px;
+}
+
+img {
+    border-radius: 50%;
+    border: 1px solid #000000;
+}
