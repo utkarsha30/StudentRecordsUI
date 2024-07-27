@@ -19,8 +19,8 @@ input{
     padding-left: 10px;
 }
 .sort-filter button {
-    flex: 1; /* Make buttons take equal space */
-    margin: 0 10px; /* Add margin between buttons */
+    flex: 1;
+    margin: 0 10px; 
     padding:10px
 }
  button{
@@ -31,7 +31,7 @@ input{
 
 table {
     border-collapse: collapse;
-    width: 100%; /* Ensure the table takes up the full width of the container */
+    width: 100%; 
 }
 
 th, td {
