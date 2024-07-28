@@ -1,9 +1,10 @@
 const url = 'https://gist.githubusercontent.com/harsh3195/b441881e0020817b84e34d27ba448418/raw/c4fde6f42310987a54ae1bc3d9b8bfbafac15617/demo-json-data.json';
 const div = document.getElementById('table-container');
-
+let allData = []
 fetch(url)
     .then(response => response.json())
     .then(data => {
+        allData = data;
         renderTable(data);
     })
     .catch(error => {
@@ -33,4 +34,27 @@ function renderTable(data) {
 
     htmlContent += '</table>';
     div.innerHTML = htmlContent;
+}
+function sortData (criteria){
+    let sortedData = [...allData];
+    if(criteria === 'A-Z'){
+        sortedData.sort((a, b) => a.first_name.localeCompare(b.first_name));
+    }
+    else if (criteria === 'Z-A') {
+        sortedData.sort((a, b) => b.first_name.localeCompare(a.first_name));
+    }
+    else if (criteria === 'Marks') {
+        sortedData.sort((a, b) => b.marks-a.marks);
+    }
+    else if (criteria === 'Passing') {
+        sortedData.sort((a, b) => b.passing-a.passing);
+    }
+    else if (criteria === 'Class') {
+        sortedData.sort((a, b) => a.class-b.class);
+    }
+    else if (criteria === 'Gender') {
+        sortedData.sort((a, b) => a.gender.localeCompare(b.gender));
+    }
+    renderTable(sortedData);
+
 }
