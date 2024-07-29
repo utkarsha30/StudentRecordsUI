@@ -35,6 +35,16 @@ function renderTable(data) {
     htmlContent += '</table>';
     div.innerHTML = htmlContent;
 }
+function filterData() {
+    const searchQuery = document.getElementById('search').value.toLowerCase(); 
+    const filteredData = allData.filter(student => {
+        const fullName = `${student.first_name} ${student.last_name}`.toLowerCase();
+        const email = student.email.toLowerCase();
+        return fullName.includes(searchQuery) || email.includes(searchQuery);
+    });
+    
+    renderTable(filteredData);
+}
 function sortData (criteria){
     let sortedData = [...allData];
     if(criteria === 'A-Z'){
