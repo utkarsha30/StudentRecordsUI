@@ -35,13 +35,15 @@ table {
 }
 
 th, td {
-    text-align: center;
-    padding: 8px;
+    text-align:start;
+    padding: 10px;
+    padding-left:15px;
 }
 
-.student-info {
+.name-container {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 }
 
 span {
